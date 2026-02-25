@@ -15,3 +15,7 @@ Un outil graphique moderne (PyQt6) pour comparer l'intégrité de deux dossiers.
 ```bash
 pip install PyQt6
 python main.py
+
+
+## 📜 Licence
+Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
