@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>950</width><height>800</height></rect></property>
+  <property name="windowTitle"><string>Diff Folder Checker Pro</string></property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow { background-color: #071223; }
+    QTreeWidget { background-color: #0b1a31; border: 1px solid #074b7e; color: #d1d1d1; border-radius: 8px; }
+    QHeaderView::section { background-color: #074b7e; color: #ffa500; font-weight: bold; }
+    QPushButton { background-color: #074b7e; color: white; border-radius: 5px; padding: 10px; font-weight: bold; }
+    #btn_compare { background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #11998e, stop:1 #38ef7d); }
+    #btn_expand_all { background-color: #45475a; color: white; }
+    QLabel { color: #bac2de; font-family: 'Segoe UI'; font-size: 11px; }
+    #lbl_stat_ok { color: #2ecc71; font-weight: bold; font-size: 13px; }
+    #lbl_stat_div { color: #f1c40f; font-weight: bold; font-size: 13px; }
+    #lbl_stat_err { color: #e74c3c; font-weight: bold; font-size: 13px; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainV">
+    <item>
+     <layout class="QHBoxLayout" name="dashboard">
+      <item><widget class="QLabel" name="lbl_stat_total"><property name="text"><string>Dossiers: 0</string></property></widget></item>
+      <item><widget class="QLabel" name="lbl_stat_ok"><property name="text"><string>Parfait: 0</string></property></widget></item>
+      <item><widget class="QLabel" name="lbl_stat_div"><property name="text"><string>Divergences: 0</string></property></widget></item>
+      <item><widget class="QLabel" name="lbl_stat_err"><property name="text"><string>Alertes: 0</string></property></widget></item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="paths">
+      <item>
+       <layout class="QVBoxLayout">
+        <item><widget class="QPushButton" name="btn_select_a"><property name="text"><string>📂 Dossier Source</string></property></widget></item>
+        <item><widget class="QLabel" name="lbl_path_a"><property name="text"><string>...</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout">
+        <item><widget class="QPushButton" name="btn_select_b"><property name="text"><string>📂 Dossier Cible</string></property></widget></item>
+        <item><widget class="QLabel" name="lbl_path_b"><property name="text"><string>...</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item><widget class="QTreeWidget" name="treeWidget"/></item>
+    <item>
+     <layout class="QHBoxLayout" name="actions">
+      <item><widget class="QPushButton" name="btn_compare"><property name="text"><string>🚀 ANALYSER LES DIFFÉRENCES</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_expand_all"><property name="text"><string>↕ TOUT DÉPLIER</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_export"><property name="text"><string>📄 RAPPORT</string></property></widget></item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+</ui>
